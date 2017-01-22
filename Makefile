@@ -1,5 +1,5 @@
 .PHONY: clean
-
+CC=gcc
 CFLAGS=-Wall
 LDFLAGS=-lpthread
 
@@ -15,7 +15,7 @@ server: server.o chatroom.o common.o
 
 client.o: client.c common.h
 
-client: client.o common.o 
+client: client.o common.o
 
 clean:
 	rm -rf *.o
